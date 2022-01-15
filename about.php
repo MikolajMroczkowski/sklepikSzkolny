@@ -1,16 +1,17 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <?php
     require "render.php";
     renderLinks();
-    renderTitle("main");
+    renderTitle("o nas");
     ?>
 </head>
 <body>
 <?php
-renderMenu("MAIN");
+renderMenu("ABOUT");
 ?>
+<div class="container"> <h1>Krótko o naszym działaniu</h1></div>
 </body>
+
 </html>

@@ -1,2 +1,2 @@
 <?php
-$appName = "Sklepik";
+$appName = "Test";

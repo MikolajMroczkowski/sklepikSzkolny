@@ -11,7 +11,10 @@
 <?php
 renderMenu("ABOUT");
 ?>
-<div class="container"> <h1>Krótko o naszym działaniu</h1></div>
+<main>
+    <div class="container"> <h1>Krótko o naszym działaniu</h1></div>
+</main>
+
 </body>
 
 </html>

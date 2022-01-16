@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+body {
+  font-family: "Dongle", sans-serif;
+  background-color: #dee2e6ff;
+  display: block;
+  justify-content: flex-start;
+}
+body nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f8f9faff;
+  height: 80px;
+}
+body nav a {
+  color: #6c757dff;
+  font-size: 35px;
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: pointer;
+  align-self: center;
+  text-decoration: none;
+}
+body nav a:hover {
+  color: #343a40ff;
+}
+body nav .right {
+  align-self: center;
+}
+body nav .navContainer {
+  padding: 18px;
+}
+body nav .active {
+  color: #343a40ff;
+}
+body nav i {
+  font-size: 20px;
+}
+body nav h2 {
+  font-family: "Dongle", sans-serif;
+  margin-right: 20px;
+  display: inline;
+  color: #212529ff;
+  font-size: 50px;
+}
+body main {
+  display: flex;
+  justify-content: center;
+}
+body main .container {
+  margin-top: 20px;
+  width: 90%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+body main .container h1 {
+  font-size: 60px;
+}
+body main .container p {
+  font-size: 40px;
+}
+body main .container .column {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #e9ecefff;
+  border-radius: 20px;
+}
+body main .container .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main .container .products .product {
+  display: block;
+  width: 270px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9faff;
+  border-radius: 20px;
+  margin: 10px;
+}
+body main .container .products .product .clickable {
+  cursor: pointer;
+}
+body main .container .products .product .addToCart {
+  all: unset;
+  padding: 10px;
+  background-color: rgba(0, 210, 0, 0.25);
+  width: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body main .container .products .product .price {
+  font-size: 25px;
+  color: #343a40ff;
+}
+body main .container .products .product img {
+  width: 250px;
+  height: 250px;
+}
+body main .container .cartProducts {
+  width: 80%;
+  height: 100%;
+}
+body main .container .cartProducts .productInCart {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: left;
+  align-items: center;
+}
+body main .container .cartProducts .productInCart:nth-child(even) {
+  background-color: #dee2e6ff;
+}
+body main .container .cartProducts .productInCart div {
+  display: flex;
+}
+body main .container .cartProducts .productInCart p {
+  margin: 2px;
+}
+body main .container .cartProducts .productInCart img {
+  width: 80px;
+}
+body main .container .cartProducts .productInCart .delete {
+  all: unset;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: rgba(204, 17, 17, 0.63);
+}
+body main .container .summary {
+  width: 20%;
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+body main .container .summary p {
+  font-size: 25px;
+}
+body main .container .summary .promo {
+  font-size: 15px;
+  margin: 0px;
+}
+body main .container .summary .promoBtn {
+  font-size: 15px;
+  cursor: pointer;
+  color: #343a40ff;
+}
+body main .container .summary .order {
+  all: unset;
+  cursor: pointer;
+  color: #343a40ff;
+  width: 20%;
+  font-size: 25px;
+  background-color: #009600;
+  border-radius: 10px;
+  padding: 10px;
+}
+body main .container .summary .order:hover {
+  background-color: #00d200;
+}
+
+/*# sourceMappingURL=style.css.map */

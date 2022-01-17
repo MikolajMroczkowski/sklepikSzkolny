@@ -72,7 +72,43 @@ body {
       align-self: center;
       display: flex;
       justify-content: center;
+      .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 500px;
+        .btn{
+          all:unset;
+          justify-self: flex-end;
+          width: auto;
+          font-size: 25px;
+          cursor: pointer;
+          margin: 10px;
+        }
+        .login{
+          font-size: 27px;
+          background-color: #eee;
+          padding: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 5px;
+        }
+        input{
+          all:unset;
+          background-color: #eee;
+          font-size: 25px;
+          margin: 5px;
+          align-self: center;
+          padding: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          outline: none;
+          border-radius: 5px;
+          width: 100%;
+        }
 
+      }
       h1 {
         font-size: 60px;
       }

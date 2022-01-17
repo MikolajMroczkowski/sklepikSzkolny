@@ -54,6 +54,42 @@ body main .container {
   display: flex;
   justify-content: center;
 }
+body main .container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+body main .container .form .btn {
+  all: unset;
+  justify-self: flex-end;
+  width: auto;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 10px;
+}
+body main .container .form .login {
+  font-size: 27px;
+  background-color: #eee;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+body main .container .form input {
+  all: unset;
+  background-color: #eee;
+  font-size: 25px;
+  margin: 5px;
+  align-self: center;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+}
 body main .container h1 {
   font-size: 60px;
 }

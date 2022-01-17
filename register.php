@@ -15,13 +15,17 @@ renderMenu("ACCOUNT");
 <main>
     <div class="container">
         <form class="form" METHOD="post">
-            <h1>Zaloguj sie</h1>
+            <h1>Zarejstruj sie</h1>
             <input placeholder="Login...">
+            <br>
+            <input placeholder="E-mail..." type="email">
             <br>
             <input placeholder="Password..." type="password">
             <br>
-            <a class="btn" href="register.php">Zarejstruj sie</a>
-            <input class="btn login" type="submit" value="Zaloguj sie">
+            <input placeholder="Re Password..." type="password">
+            <br>
+            <a class="btn" href="login.php">Zaloguj sie</a>
+            <input class="btn login" type="submit" value="Zarejstruj sie">
         </form>
     </div>
 </main>

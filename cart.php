@@ -1,9 +1,13 @@
+<?php
+require "render.php";
+require_once "function.php";
+checkLogin();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <?php
-    require "render.php";
     renderLinks();
     renderTitle("koszyk");
     ?>

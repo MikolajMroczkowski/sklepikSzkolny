@@ -90,6 +90,11 @@ body main .container .form input {
   border-radius: 5px;
   width: 100%;
 }
+body main .container .form .errBox {
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+}
 body main .container h1 {
   font-size: 60px;
 }

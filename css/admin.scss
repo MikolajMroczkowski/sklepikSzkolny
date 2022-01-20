@@ -1,11 +1,183 @@
-body{
-    main{
-      @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
-      font-family: 'Dongle', sans-serif;
-      display: flex;
-      justify-content: center;
-      .container{
+body {
+  @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+  font-family: 'Dongle', sans-serif;
+  background-color: #ccc;
 
+  main {
+    display: flex;
+    justify-content: center;
+
+    .modal {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: none;
+      top:0;
+      left: 0;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        width: 500px;
+        height: 250px;
+        border-radius: 20px;
+        align-items: flex-start;
+        background-color: #fff;
+        h1{
+          width: 100%;
+          text-align: center;
+        }
+        input{
+          width: 100%;
+          text-align: center;
+        }
+        .btn{
+          all:unset;
+          background-color: rgba(128, 128, 128, 0.2);
+          width: 40%;
+          border-radius: 10px;
+          padding: 10px 20px;
+          margin: 5px;
+          text-align: center;
+          color: black;
+          align-self: flex-end;
+        }
+        .green{
+          background-color: rgba(51, 255, 167, 0.25);
+        }
       }
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 90%;
+      flex-wrap: wrap;
+      cursor: pointer;
+
+      .header {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+
+        h1 {
+          width: 100%;
+          font-size: 35px;
+          margin: 1px;
+        }
+
+        h4 {
+          font-size: 20px;
+          margin: 1px;
+        }
+      }
+
+      .block {
+        margin: 10px;
+        background-color: #eeeeee;
+        padding: 20px;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 20px;
+
+        h3 {
+          align-self: flex-start;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+        }
+
+        p {
+          width: 100%;
+          text-align: center;
+        }
+
+        i {
+          width: 100%;
+          text-align: center;
+          font-size: 50px;
+        }
+
+        img {
+          width: 80%;
+          margin-bottom: 5px;
+        }
+
+        .name {
+          all: unset;
+          justify-self: center;
+          margin: 10px;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+          width: 70%;
+        }
+
+        .editor {
+          width: 100%;
+          height: 500px;
+
+          i {
+            font-size: 20px;
+            width: auto;
+            text-align: center;
+          }
+        }
+      }
+
+      a {
+        all: unset;
+      }
+
+      .small-width {
+        width: 100px;
+      }
+
+      .medium-width {
+        width: 300px;
+      }
+
+      .big-width {
+        width: 500px;
+      }
+
+      .huge-width {
+        width: 650px;
+      }
+
+      .max-width {
+        width: 100%;
+      }
+
+      .small-height {
+        height: 100px;
+      }
+
+      .medium-height {
+        height: 300px;
+      }
+
+      .big-height {
+        height: 500px;
+      }
+
+      .huge-height {
+        height: 650px;
+      }
+
+      .max-height {
+        height: 100%;
+      }
+    }
+  }
 }

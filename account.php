@@ -1,16 +1,13 @@
 <?php
-session_start();
-if(!isset($_SESSION['zalogowany']) || $_SESSION['zalogowany'] !=true){
-    echo "<meta http-equiv='refresh' content='0; ../login.php' />";
-    exit;
-}
+require "render.php";
+require_once "function.php";
+checkLogin();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <?php
-    require "render.php";
     renderLinks();
     renderTitle("account");
     ?>

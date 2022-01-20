@@ -11,7 +11,7 @@ function getParam($paramName)
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT value from vals WHERE name='" . $paramName."'";
+    $sql = "SELECT value from vals WHERE name='" . $paramName . "'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -30,9 +30,9 @@ function setParam($paramName, $paramValue)
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sqlDelete = "DELETE FROM vals WHERE name='".$paramName."'";
+    $sqlDelete = "DELETE FROM vals WHERE name='" . $paramName . "'";
     $conn->query($sqlDelete);
-    $sqlInsert = "INSERT INTO vals  (name,value) VALUES ('".$paramName."','" . $paramValue . "')";
+    $sqlInsert = "INSERT INTO vals  (name,value) VALUES ('" . $paramName . "','" . $paramValue . "')";
     $conn->query($sqlInsert);
     $conn->close();
 }

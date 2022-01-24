@@ -57,9 +57,9 @@ if (!isset($_SESSION['logedin']) || $_SESSION['logedin'] != true || !isset($_SES
     <div id="photoUploader" class="modal">
         <div class="box">
             <h1>Upload Photo</h1>
-            <input accept=".jpg,.gif,.webp,.png" type="file">
+            <input accept=".jpg,.gif,.webp,.png" id="photoUploaderInput" type="file">
             <button onclick="closeModal('photoUploader')" class="btn">Zamknij</button>
-            <input class="btn green" type="submit" value="Dodaj">
+            <input class="btn green" type="submit" onclick="uploadFile()" value="Dodaj">
         </div>
     </div>
     <div class="container">

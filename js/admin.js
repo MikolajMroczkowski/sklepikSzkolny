@@ -12,7 +12,7 @@ var isNew = true;
 var id = -1;
 
 function saveProduct() {
-    if(document.getElementById("title").value===""||document.getElementById("price").value===""){
+    if (document.getElementById("title").value === "" || document.getElementById("price").value === "") {
         alert("Nazwa nie może być pusta!")
         return;
     }
@@ -24,11 +24,11 @@ function saveProduct() {
         xhr.onreadystatechange = function () { // Call a function when the state changes.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 alert("zapisano");
-                location="editProduct.php?id="+this.responseText
+                location = "editProduct.php?id=" + this.responseText
             }
         }
         xhr.send("title=" + document.getElementById("title").value + "&price=" + document.getElementById("price").value + "&photo=" +
-            document.getElementById("photo").src +"&about="+easyMDE.value());
+            document.getElementById("photo").src + "&about=" + easyMDE.value());
     } else {
         var xhr = new XMLHttpRequest();
         xhr.open("POST", 'productSave.php', true);
@@ -40,7 +40,7 @@ function saveProduct() {
             }
         }
         xhr.send("title=" + document.getElementById("title").value + "&price=" + document.getElementById("price").value + "&photo=" +
-            document.getElementById("photo").src +"&id="+id+"&about="+easyMDE.value());
+            document.getElementById("photo").src + "&id=" + id + "&about=" + easyMDE.value());
     }
 }
 
@@ -54,8 +54,29 @@ function killProduct() {
 
         xhr.onreadystatechange = function () { // Call a function when the state changes.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                location = "products.php";            }
+                location = "products.php";
+            }
         }
-        xhr.send("id="+id);
+        xhr.send("id=" + id);
     }
+}
+
+function uploadFile() {
+    let formData = new FormData();
+    formData.append("file", document.getElementById("photoUploaderInput").files[0]);
+    fetch('productPhotoUploader.php', {
+        method: "POST",
+        body: formData
+    }).then(response => {
+        response.clone().text().then(
+            function (text) {
+                if (text.includes("ERROR")) {
+                    alert(text);
+                } else {
+                    document.getElementById("photo").src = "../photos/" + text;
+                }
+                closeModal('photoUploader')
+            })
+    });
+
 }

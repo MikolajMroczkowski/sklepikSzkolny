@@ -30,25 +30,30 @@ if (!isset($_SESSION['logedin']) || $_SESSION['logedin'] != true || !isset($_SES
         <a href="panel.php">
             <div class="block small-height small-width"><i class="bi bi-chevron-left"></i>Go Back</div>
         </a>
-        <a href="editProduct.php?id=NEW"><div  class="block small-height small-width"><i class="bi bi-plus-circle"></i>New</div></a>
-        <div class="block huge-height max-width"><h3>Moje Produkty</h3></div>
-        <?php
-        require "config.php";
-        $conn = new mysqli($dbAdress, $dbUser, $dbPass, $dbName);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $sql = "SELECT * FROM produkty";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                renderProduct($row['id'],"product.php?id="+$row['id'],$row['photo'],$row['title'],$row['price']);
-            }
-        } else {
-            echo "Database is empty";
-        }
-        $conn->close();
-        ?>
+        <a href="editProduct.php?id=NEW">
+            <div class="block small-height small-width"><i class="bi bi-plus-circle"></i>New</div>
+        </a>
+        <div class="block huge-height max-width "><h3>Moje Produkty</h3>
+            <div class="flexListBox">
+                <?php
+                require "../config.php";
+                $conn = new mysqli($dbAdress, $dbUser, $dbPass, $dbName);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                $sql = "SELECT * FROM produkty WHERE removed=0";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<a href="editProduct.php?id=' . + $row['id'] .'"><div class="box"><img src="'.$row['photo'].'"><p>'.$row['title'].'</p><p class="price">'.$row['price'].'</p></div></a>';
+                    }
+                } else {
+                    echo "Database is empty";
+                }
+                $conn->close();
+                ?>
+            </div>
+        </div>
 </main>
 </body>
 </html>
